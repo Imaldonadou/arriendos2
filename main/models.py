@@ -16,6 +16,7 @@ class UserProfile(models.Model):
         related_name='userprofile',
         on_delete=models.CASCADE
     )
+    
 class Region(models.Model):
     cod = models.CharField(max_length=5, primary_key=True)
     nombre = models.CharField(max_length=255)
@@ -28,6 +29,7 @@ class Comuna(models.Model):
         on_delete=models.RESTRICT,
         related_name='comunas'
     )
+    
 class Inmueble(models.Model):
     inmuebles = (
         ('casa', 'Casa'),
